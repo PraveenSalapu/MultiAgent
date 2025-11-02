@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from agents.coordinator_agent import HealthcareCoordinator
 from agents.diabetes_prediction_agent import DiabetesPredictionAgent
 from agents.appointment_scheduler_agent import AppointmentSchedulerAgent
-from agents.provider_locator_agent import HealthcareProviderLocator
+from agents.provider_locator_hybrid import HybridProviderLocator  # Using hybrid approach
 from agents.dietician_agent import DieticianAgent
 from agents.diabetes_care_agent import DiabetesCareSpecialist
 from agents.general_health_agent import GeneralHealthAssistant
@@ -33,10 +33,11 @@ class HealthcareAssistantSystem:
         print("=" * 60)
 
         # Create all specialized agents
+        # Using Hybrid Provider Locator for best of both worlds
         agents = [
             DiabetesPredictionAgent(),
             AppointmentSchedulerAgent(),
-            HealthcareProviderLocator(),
+            HybridProviderLocator(prefer_web_search=True, merge_results=False),
             DieticianAgent(),
             DiabetesCareSpecialist(),
             GeneralHealthAssistant()

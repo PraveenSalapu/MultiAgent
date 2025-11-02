@@ -38,6 +38,23 @@ RISK_WEIGHTS = {
 DEFAULT_SEARCH_RADIUS = 10.0  # miles
 MAX_RESULTS = 10
 
+# Hybrid Provider Locator Configuration
+HYBRID_PROVIDER_CONFIG = {
+    'prefer_web_search': True,  # Try web search first
+    'merge_results': False,  # Set to True to combine web and static results
+    'max_results': 10,  # Maximum results to return
+    'cache_results': True,  # Cache web search results
+    'fallback_to_static': True  # Use static data if web search fails
+}
+
+# Search Mode Options:
+# - 'web_preferred': Try web first, fall back to static (recommended)
+# - 'static_preferred': Use static data primarily
+# - 'hybrid': Always merge both sources
+# - 'web_only': Only use web (may return no results)
+# - 'static_only': Only use static data
+DEFAULT_SEARCH_MODE = 'web_preferred'
+
 # Appointment Configuration
 APPOINTMENT_BOOKING_WINDOW = 90  # days ahead
 APPOINTMENT_SLOT_DURATION = 30  # minutes
