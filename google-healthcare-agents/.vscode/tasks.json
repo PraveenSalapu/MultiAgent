@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Demo Mode",
+            "type": "shell",
+            "command": "python",
+            "args": ["main.py", "--demo"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Interactive Mode",
+            "type": "shell",
+            "command": "python",
+            "args": ["main.py"],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Diabetes Prediction Example",
+            "type": "shell",
+            "command": "python",
+            "args": ["examples/example_diabetes_prediction.py"],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Full Workflow Example",
+            "type": "shell",
+            "command": "python",
+            "args": ["examples/example_full_workflow.py"],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
