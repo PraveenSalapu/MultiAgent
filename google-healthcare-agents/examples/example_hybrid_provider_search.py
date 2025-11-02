@@ -69,7 +69,7 @@ The hybrid approach provides:
     )
 
     print(f"Status: {response1['status']}")
-    print(f"Search Mode Used: {response1['search_mode']}")
+    print(f"Search Mode Used: {response1.get('search_mode', 'N/A')}")
     print(f"Total Found: {response1['total_found']}")
     print(f"\nSearch Breakdown:")
     print(f"  - Web Results: {response1['search_breakdown']['web_results']}")
@@ -107,7 +107,7 @@ The hybrid approach provides:
         context={}
     )
 
-    print(f"Search Mode: {response2['search_mode']}")
+    print(f"Search Mode: {response2.get('search_mode', 'N/A')}")
     print(f"Total Results: {response2['total_found']}")
     print(f"\nSearch Breakdown:")
     print(f"  - Web Results: {response2['search_breakdown']['web_results']}")
@@ -134,21 +134,21 @@ The hybrid approach provides:
     print("   Strategy: Try web first, use static only if web fails")
     locator3.set_mode('web_preferred')
     response3a = locator3.process_request("Find clinics in Boston", {})
-    print(f"   Result: {response3a['search_mode']} ({response3a['total_found']} facilities)\n")
+    print(f"   Result: {response3a.get('search_mode', 'N/A')} ({response3a['total_found']} facilities)\n")
 
     # Mode 2: Static Preferred
     print("2️⃣  STATIC PREFERRED MODE")
     print("   Strategy: Use static data primarily")
     locator3.set_mode('static_preferred')
     response3b = locator3.process_request("Find clinics", {})
-    print(f"   Result: {response3b['search_mode']} ({response3b['total_found']} facilities)\n")
+    print(f"   Result: {response3b.get('search_mode', 'N/A')} ({response3b['total_found']} facilities)\n")
 
     # Mode 3: Hybrid (merge both)
     print("3️⃣  HYBRID MERGE MODE")
     print("   Strategy: Always get and merge both sources")
     locator3.set_mode('hybrid')
     response3c = locator3.process_request("Find healthcare providers", {})
-    print(f"   Result: {response3c['search_mode']} ({response3c['total_found']} facilities)\n")
+    print(f"   Result: {response3c.get('search_mode', 'N/A')} ({response3c['total_found']} facilities)\n")
 
     # =========================================================================
     # Example 4: Location-Based Search with Distances
@@ -195,7 +195,7 @@ The hybrid approach provides:
         "Find hospitals",
         context={'search_mode': 'web_only'}
     )
-    print(f"   Used: {response5a['search_mode']}\n")
+    print(f"   Used: {response5a.get('search_mode', 'web_only')}\n")
 
     # Force static only
     print("📋 Forcing STATIC ONLY mode:")
@@ -203,7 +203,7 @@ The hybrid approach provides:
         "Find hospitals",
         context={'search_mode': 'static_only'}
     )
-    print(f"   Used: {response5b['search_mode']}\n")
+    print(f"   Used: {response5b.get('search_mode', 'static_only')}\n")
 
     # =========================================================================
     # Example 6: Detailed Facility Information
