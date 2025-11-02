@@ -1,0 +1,74 @@
+{
+  "patients": [
+    {
+      "patient_id": "P001",
+      "name": "John Doe",
+      "age": 45,
+      "health_data": {
+        "bmi": 28.5,
+        "blood_glucose": 118,
+        "blood_pressure": "135/85",
+        "family_history": true,
+        "physical_activity": "low"
+      },
+      "location": {
+        "lat": 40.7128,
+        "lon": -74.0060
+      },
+      "contact": "john.doe@email.com"
+    },
+    {
+      "patient_id": "P002",
+      "name": "Jane Smith",
+      "age": 52,
+      "health_data": {
+        "bmi": 32.0,
+        "blood_glucose": 145,
+        "blood_pressure": "145/92",
+        "family_history": true,
+        "physical_activity": "sedentary"
+      },
+      "location": {
+        "lat": 40.7158,
+        "lon": -74.0050
+      },
+      "contact": "jane.smith@email.com",
+      "has_diabetes": true,
+      "diabetes_type": "type2"
+    },
+    {
+      "patient_id": "P003",
+      "name": "Robert Johnson",
+      "age": 38,
+      "health_data": {
+        "bmi": 24.0,
+        "blood_glucose": 92,
+        "blood_pressure": "120/78",
+        "family_history": false,
+        "physical_activity": "moderate"
+      },
+      "location": {
+        "lat": 40.7108,
+        "lon": -74.0070
+      },
+      "contact": "robert.j@email.com"
+    },
+    {
+      "patient_id": "P004",
+      "name": "Maria Garcia",
+      "age": 61,
+      "health_data": {
+        "bmi": 29.0,
+        "blood_glucose": 108,
+        "blood_pressure": "138/88",
+        "family_history": true,
+        "physical_activity": "low"
+      },
+      "location": {
+        "lat": 40.7148,
+        "lon": -74.0045
+      },
+      "contact": "maria.garcia@email.com"
+    }
+  ]
+}

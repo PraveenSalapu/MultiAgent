@@ -1,0 +1,11 @@
+# Healthcare Multi-Agent System Requirements
+# This system uses only Python standard library - no external dependencies required!
+
+# Python Version: 3.7+
+
+# Optional dependencies for future enhancements:
+# scikit-learn>=1.0.0        # For actual ML models
+# pandas>=1.3.0              # For data processing
+# numpy>=1.21.0              # For numerical computations
+# requests>=2.26.0           # For API integrations
+# google-maps-services>=4.7.0 # For real location services
